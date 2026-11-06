@@ -1,0 +1,139 @@
+/* ODIN — On Demand Information and News · Autor: ProfBru - Bruno Penedo © 2026 - TODOS OS DIREITOS RESERVADOS · profbruanbima@gmail.com
+   Portal de feeds — look & feel de portal agregador clássico (tabelas por categoria, hover com
+   balão de resumo). Medidas: Arial 11px, caixa 265px, borda #C1DAD7, cabeçalho #49a5d3. */
+
+.odin-portal { font: calc(11px * var(--odin-escala)) / 1.5em Arial, Helvetica, Geneva, sans-serif; color: var(--odin-texto); padding: 0 0 12px; }
+.odin-portal a { color: var(--odin-link); text-decoration: none; }
+
+.op-topo { display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; gap: 8px; border-top: 2px solid #ddd; padding: 8px 10px 4px; }
+.op-logo { grid-column: 2; text-align: center; }
+.op-logo .op-marca { display: block; margin: 0 auto; width: 150px; height: 112px; }
+/* olho de ODIN centralizado sob a marca, na mesma largura (proporção preservada) */
+.op-logo .op-olho { display: block; margin: 6px auto 2px; width: 230px; height: auto; filter: drop-shadow(0 2px 6px rgba(0,120,255,.25)); transition: transform .25s; }
+.op-logo .op-olho:hover { transform: scale(1.04); }
+@media (max-width: 700px) { .op-logo .op-olho { width: 190px; } }
+.op-logo small { display: block; color: var(--odin-suave); letter-spacing: 1px; }
+.op-dir { grid-column: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.op-busca { display: flex; align-items: center; border: 1px solid var(--odin-borda); background: var(--odin-cartao); border-radius: 14px; padding: 2px 8px; width: min(320px, 100%); }
+.op-busca svg { width: 14px; height: 14px; flex: none; opacity: .65; }
+.op-busca input { border: 0; outline: 0; background: transparent; color: var(--odin-texto); font: inherit; font-size: 1.1em; padding: 3px 6px; width: 100%; }
+.op-linha { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
+.op-linha label { color: var(--odin-texto); }
+.op-linha select, .op-linha button { font: 11px Arial, sans-serif; border: 1px solid var(--odin-borda); background: var(--odin-cartao); color: var(--odin-texto); border-radius: 4px; padding: 3px 6px; cursor: pointer; }
+
+/* abas (menu de categorias) */
+.op-abas { display: flex; flex-wrap: wrap; gap: 2px; padding: 8px 10px 0; border-bottom: 1px solid var(--odin-borda); }
+.op-abas button { font: calc(11px * var(--odin-escala)) Arial, sans-serif; color: #666; background: linear-gradient(#fafafa, #e9e9e9); border: 1px solid #cfcfcf; border-bottom: 0; border-radius: 6px 6px 0 0; padding: 5px 12px 4px; cursor: pointer; }
+.odin-app[data-modo="escuro"] .op-abas button { background: linear-gradient(#2a2e33, #23272b); color: #c9d1d9; border-color: #3a4046; }
+.op-abas button:hover { color: #000; }
+.op-abas button[aria-pressed="true"] { background: var(--odin-cartao); color: var(--odin-texto); font-weight: bold; position: relative; top: 1px; }
+
+/* barra de seleção / ferramentas */
+.op-sel { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding: 6px 10px; background: color-mix(in srgb, var(--odin-cartao) 85%, transparent); border-bottom: 1px solid var(--odin-borda); position: sticky; top: 0; z-index: 3; }
+.op-sel button { font: 11px Arial, sans-serif; border: 1px solid var(--odin-borda); background: var(--odin-cartao); color: var(--odin-texto); border-radius: 4px; padding: 3px 8px; cursor: pointer; }
+.op-sel button.op-prim { background: #49a5d3; color: #fff; border-color: #3b8fb9; }
+.op-sel .op-cont { font-weight: bold; color: var(--odin-destaque); }
+
+/* grade de caixas — rolagem vertical, categorias ilimitadas */
+.op-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(265px, 1fr)); gap: 10px; padding: 10px; align-items: start; max-height: calc(100vh - 210px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.op-caixa { position: relative; isolation: isolate; border-collapse: collapse; width: 100%; background: var(--odin-cartao); }
+.op-caixa.op-com-fundo::before { content: ""; position: absolute; inset: 0; z-index: -2; background: var(--fundo-cat) center / cover; }
+.op-caixa.op-com-fundo::after { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--odin-cartao); opacity: var(--odin-veu-cat, .7); }
+.op-caixa.op-com-fundo { background: transparent; }
+.op-caixa.op-arrastando { opacity: .45; outline: 2px dashed #49a5d3; }
+.op-caixa.op-alvo { outline: 2px solid #49a5d3; }
+.op-th { font: bold calc(11px * var(--odin-escala)) Arial, Helvetica, Geneva, sans-serif; color: #49a5d3; background: var(--odin-cartao); border: 1px solid var(--odin-borda); border-bottom: 1px solid #000; letter-spacing: 2px; text-transform: uppercase; text-align: left; padding: 6px 6px 6px 12px; display: flex; align-items: center; gap: 6px; cursor: grab; user-select: none; }
+.odin-app[data-modo="escuro"] .op-th { border-bottom-color: #9aa; }
+.op-th .op-nome { flex: 1; }
+.op-th .op-n { color: var(--odin-suave); letter-spacing: 0; font-weight: normal; }
+.op-th button, .op-th label { font: 11px Arial; letter-spacing: 0; border: 0; background: transparent; cursor: pointer; padding: 0 2px; color: var(--odin-suave); }
+.op-th input[type=file] { display: none; }
+.op-mover { display: none; }
+
+.op-td { border-left: 1px solid var(--odin-borda); border-right: 1px solid var(--odin-borda); border-bottom: 1px solid var(--odin-borda); padding: 3px 3px 3px 8px; color: var(--odin-suave); vertical-align: top; display: flex; align-items: flex-start; gap: 6px; position: relative; }
+.op-td:hover, .op-td.highlight { background: #eee; }
+.odin-app[data-modo="escuro"] .op-td:hover { background: #2b3036; }
+.op-td input[type=checkbox] { margin: 3px 0 0; accent-color: #49a5d3; }
+.op-rss { flex: none; width: 16px; height: 16px; margin-top: 1px; }
+.op-hrma { flex: 1; min-width: 0; }
+.op-hrma > a { color: var(--odin-texto); display: block; }
+.op-hrma > a:hover { text-decoration: underline; color: #000; }
+.odin-app[data-modo="escuro"] .op-hrma > a:hover { color: #fff; }
+.op-alerta-on { color: #c2410c; font-weight: bold; }
+.op-hrma mark { background: #fff36b; color: #000; padding: 0; }
+.op-acoes { display: none; gap: 2px; }
+.op-td:hover .op-acoes { display: flex; }
+.op-acoes button { border: 0; background: transparent; cursor: pointer; font-size: 12px; padding: 0 2px; }
+
+/* balão do hover (infobox) */
+.op-info { display: none; position: absolute; z-index: 20; left: 60%; top: 100%; margin-top: 2px; width: min(400px, 82vw); padding: 15px; border: solid 1px #003567; background: #eaf5ff; color: #111; box-shadow: 0 6px 18px #0003; pointer-events: none; }
+.op-td:hover .op-info, .op-td:focus-within .op-info { display: block; }
+.op-info .op-tit { font-weight: bold; color: #002648; font-size: 1.15em; line-height: 1.3; }
+.op-info .op-desc { margin-top: 10px; text-align: justify; }
+.op-info small { color: #335; }
+.op-caixa:nth-child(4n) .op-info, .op-caixa:nth-child(4n-1) .op-info { left: auto; right: 40%; }
+
+.op-mais { border: 1px solid var(--odin-borda); border-top: 0; text-align: center; padding: 3px; }
+.op-mais button { font: 11px Arial; border: 0; background: transparent; color: var(--odin-link); cursor: pointer; }
+.op-vazio { padding: 8px 12px; color: #a00; border: 1px solid var(--odin-borda); border-top: 0; }
+
+.op-painel { margin: 8px 10px; padding: 10px; border: 1px solid #003567; background: #f4ffdd; color: #111; }
+.odin-app[data-modo="escuro"] .op-painel { background: #1e2a1a; color: #e7e9ec; }
+.op-painel h4 { margin: 0 0 6px; font-size: 1.1em; }
+.op-painel li { margin: 3px 0; }
+.op-painel input[type=text] { font: inherit; padding: 2px 5px; border: 1px solid var(--odin-borda); }
+
+.op-rodape { background: #eee; border-top: 2px solid #ddd; text-align: center; margin-top: 30px; padding: 18px 8px; font: 12px Arial, sans-serif; color: #000; }
+.odin-app[data-modo="escuro"] .op-rodape { background: #22262b; color: #ccc; border-top-color: #333; }
+
+@media (max-width: 760px) {
+  .op-topo { grid-template-columns: 1fr; }
+  .op-logo, .op-dir { grid-column: 1; align-items: stretch; }
+  .op-busca { width: 100%; }
+  .op-grade { max-height: none; grid-template-columns: 1fr; }
+  .op-mover { display: inline; }             /* no toque, ▲▼ substituem o arrastar */
+  .op-info { left: 8px; right: 8px; width: auto; }
+}
+@media print { .op-grade { max-height: none; overflow: visible; } .op-sel, .op-abas, .op-topo .op-dir { display: none; } }
+
+/* importação de alertas em lote (.xls/.xlsx/.csv/.txt) */
+.op-import { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin: 8px 0; padding: 10px; border: 2px dashed #49a5d3; border-radius: 6px; background: rgba(73,165,211,.07); }
+.op-import small { flex-basis: 100%; color: inherit; opacity: .75; }
+.op-import output { flex-basis: 100%; font-weight: normal; }
+.op-import.op-soltando { background: rgba(73,165,211,.22); border-color: #004080; }
+.op-btn-import { cursor: pointer; padding: 4px 10px; border-radius: 4px; background: #004080; color: #fff; font-weight: bold; white-space: nowrap; }
+.op-btn-import:hover, .op-btn-import:focus-within { background: #0059b3; }
+.op-painel input[type=search] { font: inherit; padding: 2px 5px; border: 1px solid var(--odin-borda); margin-left: 8px; }
+.op-painel-alertas ul { max-height: 50vh; overflow: auto; }
+
+/* ── Portal em TELA CHEIA (/portal-tela-cheia): cobre a janela, sem o menu lateral; responsivo ── */
+html.op-sem-rolagem, html.op-sem-rolagem body { overflow: hidden; }
+.odin-portal.op-tela-cheia { position: fixed; inset: 0; z-index: 45; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+  background-color: var(--odin-fundo); padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+.odin-portal.op-tela-cheia:fullscreen { background-color: var(--odin-fundo); }
+.op-tela-cheia .op-grade { max-height: calc(100vh - 250px); max-height: calc(100dvh - 250px); grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.op-btn-link { font: 12px Arial; padding: 3px 8px; border: 1px solid var(--odin-borda); border-radius: 3px; color: var(--odin-link); text-decoration: none; background: var(--odin-cartao); white-space: nowrap; }
+.op-btn-link:hover { background: var(--odin-destaque); color: #fff; }
+@media (max-width: 760px) {
+  .op-tela-cheia .op-grade { max-height: none; grid-template-columns: 1fr; }
+  .op-tela-cheia .op-sel { position: sticky; top: 0; z-index: 3; background: var(--odin-fundo); overflow-x: auto; flex-wrap: nowrap; }
+  .op-tela-cheia .op-abas { display: flex; overflow-x: auto; flex-wrap: nowrap; height: auto; scrollbar-width: thin; }
+  .op-tela-cheia .op-abas > *, .op-tela-cheia .op-sel > * { flex: none; white-space: nowrap; }
+  .op-tela-cheia .op-sel { display: flex; gap: 6px; align-items: center; padding: 6px 8px; }
+}
+
+/* modo limpo: só as caixas de notícias; botão flutuante alterna */
+.op-limpar { position: fixed; top: calc(8px + env(safe-area-inset-top)); right: calc(10px + env(safe-area-inset-right)); z-index: 50;
+  font: 600 12px Arial; padding: 6px 11px; border-radius: 16px; border: 1px solid var(--odin-borda); background: var(--odin-cartao); color: var(--odin-texto);
+  box-shadow: 0 2px 10px rgba(0,0,0,.18); cursor: pointer; opacity: .9; }
+.op-limpar:hover, .op-limpar:focus-visible { opacity: 1; background: var(--odin-destaque); color: #fff; }
+.op-limpo .op-topo, .op-limpo .op-abas, .op-limpo .op-sel, .op-limpo .op-paineis, .op-limpo .op-rodape,
+.op-limpo .op-td input[data-sel], .op-limpo .op-acoes, .op-limpo .op-th .op-mover, .op-limpo .op-th [data-alerta-cat], .op-limpo .op-th label { display: none !important; }
+.op-limpo .op-grade { max-height: none; padding-top: 44px; }
+@media (max-width: 760px) { .op-limpar span { display: none; } .op-limpar { padding: 8px 12px; font-size: 16px; } }
+
+/* no Portal com o menu do painel, o botão fica abaixo do cabeçalho do Evidence */
+.op-limpar.op-limpar-painel { top: calc(64px + env(safe-area-inset-top)); }
+.odin-portal:not(.op-tela-cheia).op-limpo .op-grade { max-height: calc(100vh - 90px); max-height: calc(100dvh - 90px); }
+/* reserva o canto do botão ◱ para não encostar na barra de conforto */
+@media (min-width: 761px) { .op-tela-cheia .op-topo { padding-right: 140px; } }

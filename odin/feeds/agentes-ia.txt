@@ -1,0 +1,5 @@
+# ODIN · Agentes de IA — índice gerado em 2026-11-06 a partir de config/feeds/agentes-ia.txt
+# nome | arquivo local espelhado | URL original
+Hacker News - Newest: """AI" "agent"" "agentic"" | /odin/feeds/agentes-ia/dda9e401be.xml | https://hnrss.org/newest?q=%22AI+agent%22+OR+agentic&points=20
+""AI agents" OR "agentic AI"" - Google News | /odin/feeds/agentes-ia/b4618deb44.xml | https://news.google.com/rss/search?q=%22AI+agents%22+OR+%22agentic+AI%22&hl=en-US&gl=US&ceid=US:en
+""agentes de IA"" - Google Notícias | /odin/feeds/agentes-ia/c67b5bb1cb.xml | https://news.google.com/rss/search?q=%22agentes+de+IA%22&hl=pt-BR&gl=BR&ceid=BR:pt-419

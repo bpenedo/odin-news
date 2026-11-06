@@ -1,0 +1,7 @@
+# ODIN · Google Alerts — índice gerado em 2026-11-06 a partir de config/feeds/google-alerts.txt
+# nome | arquivo local espelhado | URL original
+ProfBru e projetos próprios | /odin/feeds/google-alerts/a61165cdb6.xml | https://news.google.com/rss/search?q=%22ProfBru%22+OR+%22Bruno+Penedo%22&hl=pt-BR&gl=BR&ceid=BR:pt-419
+Claude e Anthropic | /odin/feeds/google-alerts/6e08fb234e.xml | https://news.google.com/rss/search?q=Anthropic+Claude&hl=en-US&gl=US&ceid=US:en
+Reforma tributária — IBS/CBS | /odin/feeds/google-alerts/895cdc23fb.xml | https://news.google.com/rss/search?q=%22reforma+tribut%C3%A1ria%22+IBS+CBS&hl=pt-BR&gl=BR&ceid=BR:pt-419
+Equipamentos gráficos — lançamentos | /odin/feeds/google-alerts/12a0cc6db8.xml | https://news.google.com/rss/search?q=lan%C3%A7amento+impressora+sublima%C3%A7%C3%A3o+OR+plotter+OR+%22corte+e+vinco%22&hl=pt-BR&gl=BR&ceid=BR:pt-419
+Longevidade — ensaios clínicos | /odin/feeds/google-alerts/0855b18043.xml | https://news.google.com/rss/search?q=longevity+%22clinical+trial%22+senolytic+OR+rapamycin&hl=en-US&gl=US&ceid=US:en

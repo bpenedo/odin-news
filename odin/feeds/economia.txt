@@ -1,0 +1,6 @@
+# ODIN · Economia — índice gerado em 2026-11-06 a partir de config/feeds/economia.txt
+# nome | arquivo local espelhado | URL original
+Economia - Últimas Notícias / InfoMoney | /odin/feeds/economia/1febfc0cc1.xml | https://www.infomoney.com.br/economia/feed/
+g1 > Economia | /odin/feeds/economia/aabfccca8c.xml | https://g1.globo.com/rss/g1/economia/
+Feed Editoria | /odin/feeds/economia/61302cc92e.xml | https://agenciabrasil.ebc.com.br/rss/economia/feed.xml
+Finance & economics | /odin/feeds/economia/2d7ac3b216.xml | https://www.economist.com/finance-and-economics/rss.xml

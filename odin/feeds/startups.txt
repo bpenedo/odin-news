@@ -1,0 +1,5 @@
+# ODIN · Startups — índice gerado em 2026-11-06 a partir de config/feeds/startups.txt
+# nome | arquivo local espelhado | URL original
+Startups / TechCrunch | /odin/feeds/startups/6ab739580f.xml | https://techcrunch.com/category/startups/feed/
+"startup rodada OR "venture capital"" - Google Notícias | /odin/feeds/startups/21351426b3.xml | https://news.google.com/rss/search?q=startup+rodada+OR+%22venture+capital%22&hl=pt-BR&gl=BR&ceid=BR:pt-419
+Hacker News: Front Page | /odin/feeds/startups/4b2a9be73b.xml | https://hnrss.org/frontpage?points=150

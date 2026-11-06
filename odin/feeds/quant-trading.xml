@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:odin="https://odin.local/ns">
+<channel>
+<title>📊 Quantitative Trading — ODIN</title>
+<link>/portal#quant-trading</link>
+<description>Coluna Quantitative Trading do Jornal Diário ODIN, atualizada diariamente</description>
+<language>pt-BR</language>
+<odin:coluna>quant-trading</odin:coluna>
+<item><title>Why financial prices exhibit Brownian motion despite predictable order flow: An exactly solvable nonlinear price impact model</title><link>https://arxiv.org/abs/2502.17906</link><guid isPermaLink="false">94edfe077ef8f519</guid><description>arXiv:2502.17906v5 Announce Type: replace Abstract: In econophysics, there are two enigmatic empirical laws of financial market microstructure: (i) the market-order flow has predictable persistence due to metaorder splitting by institutional investors, as formulated by the Lillo--Mike--Farmer model. However, this phenomenon seems paradoxical given the diffusive and unpredictable price dynamics. (i</description><pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate><source url="https://rss.arxiv.org/rss/q-fin.TR">q-fin.TR updates on arXiv.org</source><category>price</category><category>order</category><category>flow</category><category>impact</category><category>model</category></item>
+<item><title>Reaction-boundary variance and adjoint-consistent local-volatility projection</title><link>https://arxiv.org/abs/2607.05011</link><guid isPermaLink="false">6ce2bfe011116d06</guid><description>arXiv:2607.05011v4 Announce Type: replace-cross Abstract: We derive an operational-time variance kernel for a latent-order-book reaction boundary and use it to separate three objects usually collapsed in calendar-time volatility models: a structural boundary cumulant, a clock projection, and a pricing-measure choice. The reaction boundary is the zero of a bid--ask imbalance field. For a locally li</description><pubDate>Fri, 06 Nov 2026 05:00:00 +0000</pubDate><source url="https://rss.arxiv.org/rss/q-fin.TR">q-fin.TR updates on arXiv.org</source><category>boundary</category><category>reaction</category><category>variance</category><category>volatility</category><category>projection</category></item>
+</channel>
+</rss>
