@@ -1,0 +1,6 @@
+# ODIN · Mercado de Capitais — índice gerado em 2026-11-14 a partir de config/feeds/mercado-capitais.txt
+# nome | arquivo local espelhado | URL original
+Mercados Financeiros - Últimas Notícias / InfoMoney | /odin/feeds/mercado-capitais/66fa7ba92b.xml | https://www.infomoney.com.br/mercados/feed/
+Money Times | /odin/feeds/mercado-capitais/26bca422e1.xml | https://www.moneytimes.com.br/feed/
+MarketWatch.com - Top Stories | /odin/feeds/mercado-capitais/df1d388d5e.xml | https://feeds.content.dowjones.io/public/rss/mw_topstories
+"ibovespa OR B3 ações" - Google Notícias | /odin/feeds/mercado-capitais/ae1eca0f76.xml | https://news.google.com/rss/search?q=ibovespa+OR+B3+a%C3%A7%C3%B5es&hl=pt-BR&gl=BR&ceid=BR:pt-419

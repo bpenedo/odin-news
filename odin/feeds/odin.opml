@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+<head><title>ODIN — categorias do Jornal (2026-11-14)</title></head>
+<body>
+<outline type="rss" text="Mercado de Capitais" xmlUrl="feeds/mercado-capitais.xml"/>
+<outline type="rss" text="Economia" xmlUrl="feeds/economia.xml"/>
+<outline type="rss" text="Estruturas Empresariais Internacionais" xmlUrl="feeds/estruturas-internacionais.xml"/>
+<outline type="rss" text="Elisão Fiscal" xmlUrl="feeds/elisao-fiscal.xml"/>
+<outline type="rss" text="Startups" xmlUrl="feeds/startups.xml"/>
+<outline type="rss" text="Inteligência Artificial" xmlUrl="feeds/inteligencia-artificial.xml"/>
+<outline type="rss" text="Projetos GitHub Dev" xmlUrl="feeds/github-dev.xml"/>
+<outline type="rss" text="Agentes de IA" xmlUrl="feeds/agentes-ia.xml"/>
+<outline type="rss" text="Quantitative Finance" xmlUrl="feeds/quant-finance.xml"/>
+<outline type="rss" text="Quantitative Trading" xmlUrl="feeds/quant-trading.xml"/>
+<outline type="rss" text="Artigos Científicos" xmlUrl="feeds/artigos-cientificos.xml"/>
+<outline type="rss" text="Equipamentos e Dicas do Setor Gráfico" xmlUrl="feeds/setor-grafico.xml"/>
+<outline type="rss" text="Informações Anti-Aging" xmlUrl="feeds/anti-aging.xml"/>
+<outline type="rss" text="Google Alerts" xmlUrl="feeds/google-alerts.xml"/>
+</body>
+</opml>

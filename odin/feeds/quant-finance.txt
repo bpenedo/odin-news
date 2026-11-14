@@ -1,0 +1,4 @@
+# ODIN · Quantitative Finance — índice gerado em 2026-11-14 a partir de config/feeds/quant-finance.txt
+# nome | arquivo local espelhado | URL original
+q-fin updates on arXiv.org | /odin/feeds/quant-finance/8688a33fd4.xml | https://rss.arxiv.org/rss/q-fin
+Quantocracy, Author at Quantocracy | /odin/feeds/quant-finance/b1e93f593c.xml | https://quantocracy.com/feed/

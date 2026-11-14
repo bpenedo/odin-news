@@ -1,0 +1,4 @@
+# ODIN · Elisão Fiscal — índice gerado em 2026-11-14 a partir de config/feeds/elisao-fiscal.txt
+# nome | arquivo local espelhado | URL original
+""planejamento tributário" OR "elisão fiscal" OR "reforma tributária"" - Google Notícias | /odin/feeds/elisao-fiscal/9490fcfac5.xml | https://news.google.com/rss/search?q=%22planejamento+tribut%C3%A1rio%22+OR+%22elis%C3%A3o+fiscal%22+OR+%22reforma+tribut%C3%A1ria%22&hl=pt-BR&gl=BR&ceid=BR:pt-419
+""tax planning" OR "transfer pricing" OR "tax treaty"" - Google News | /odin/feeds/elisao-fiscal/bfa1956848.xml | https://news.google.com/rss/search?q=%22tax+planning%22+OR+%22transfer+pricing%22+OR+%22tax+treaty%22&hl=en-US&gl=US&ceid=US:en

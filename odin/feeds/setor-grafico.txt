@@ -1,0 +1,5 @@
+# ODIN · Equipamentos e Dicas do Setor Gráfico — índice gerado em 2026-11-14 a partir de config/feeds/setor-grafico.txt
+# nome | arquivo local espelhado | URL original
+"gráfica impressão OR "indústria gráfica" OR sublimação" - Google Notícias | /odin/feeds/setor-grafico/59474a458b.xml | https://news.google.com/rss/search?q=gr%C3%A1fica+impress%C3%A3o+OR+%22ind%C3%BAstria+gr%C3%A1fica%22+OR+sublima%C3%A7%C3%A3o&hl=pt-BR&gl=BR&ceid=BR:pt-419
+""printing industry" OR "wide format printer" OR "label printing"" - Google News | /odin/feeds/setor-grafico/841dcdede6.xml | https://news.google.com/rss/search?q=%22printing+industry%22+OR+%22wide+format+printer%22+OR+%22label+printing%22&hl=en-US&gl=US&ceid=US:en
+https://whattheythink.com/rss/ | /odin/feeds/setor-grafico/57497fc50c.xml | https://whattheythink.com/rss/

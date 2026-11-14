@@ -1,0 +1,4 @@
+# ODIN · Estruturas Empresariais Internacionais — índice gerado em 2026-11-14 a partir de config/feeds/estruturas-internacionais.txt
+# nome | arquivo local espelhado | URL original
+"holding offshore OR "estrutura societária" OR "family office"" - Google Notícias | /odin/feeds/estruturas-internacionais/4dd13fd845.xml | https://news.google.com/rss/search?q=holding+offshore+OR+%22estrutura+societ%C3%A1ria%22+OR+%22family+office%22&hl=pt-BR&gl=BR&ceid=BR:pt-419
+""cross-border" holding OR "corporate structure" OR "family office"" - Google News | /odin/feeds/estruturas-internacionais/1c1c9ea43e.xml | https://news.google.com/rss/search?q=%22cross-border%22+holding+OR+%22corporate+structure%22+OR+%22family+office%22&hl=en-US&gl=US&ceid=US:en

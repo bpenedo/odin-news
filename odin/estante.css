@@ -1,0 +1,62 @@
+/* ODIN — On Demand Information and News · Autor: ProfBru - Bruno Penedo © 2026 - TODOS OS DIREITOS RESERVADOS · profbruanbima@gmail.com
+   Estante — leitor "ler depois" local (layout de navegação lateral + grade de cartões + modo leitura). */
+.odin-estante { --es-acento: #ef4056; --es-teal: #1cb0a8; font: calc(15px * var(--odin-escala))/1.5 "Graphik", -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+.es-topo { display: flex; align-items: center; gap: 14px; padding: 10px 18px; border-bottom: 1px solid var(--odin-borda); background: var(--odin-cartao); position: sticky; top: 0; z-index: 4; flex-wrap: wrap; }
+.es-marca { display: flex; align-items: center; gap: 8px; font: 700 1.25em/1 Georgia, serif; color: var(--odin-texto); }
+.es-marca svg { width: 28px; height: 28px; }
+.es-topo .es-busca { flex: 1; min-width: 180px; max-width: 460px; display: flex; align-items: center; gap: 6px; background: color-mix(in srgb, var(--odin-texto) 6%, transparent); border-radius: 20px; padding: 6px 14px; }
+.es-busca input { border: 0; background: transparent; outline: 0; font: inherit; color: var(--odin-texto); width: 100%; }
+.es-btn { font: 600 .85em Arial, sans-serif; border: 1px solid var(--odin-borda); background: var(--odin-cartao); color: var(--odin-texto); border-radius: 20px; padding: 6px 14px; cursor: pointer; }
+.es-btn.es-prim { background: var(--es-acento); border-color: var(--es-acento); color: #fff; }
+.es-corpo { display: grid; grid-template-columns: 220px 1fr; min-height: 70vh; }
+.es-lateral { border-right: 1px solid var(--odin-borda); padding: 18px 10px; }
+.es-lateral button { display: flex; width: 100%; align-items: center; gap: 10px; border: 0; background: transparent; color: var(--odin-texto); font: 500 .95em Arial, sans-serif; padding: 8px 12px; border-radius: 8px; cursor: pointer; text-align: left; }
+.es-lateral button:hover { background: color-mix(in srgb, var(--odin-texto) 7%, transparent); }
+.es-lateral button[aria-current="true"] { color: var(--es-acento); background: color-mix(in srgb, var(--es-acento) 10%, transparent); font-weight: 700; }
+.es-lateral h5 { margin: 18px 12px 6px; font: 700 .72em Arial; letter-spacing: .08em; text-transform: uppercase; color: var(--odin-suave); }
+.es-lateral .es-n { margin-left: auto; color: var(--odin-suave); font-weight: 400; font-size: .85em; }
+.es-main { padding: 18px 26px; min-width: 0; }
+.es-cab { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.es-cab h2 { font: 700 1.7em Georgia, serif; margin: 0 auto 0 0; }
+.es-cab select { font: inherit; font-size: .85em; border: 1px solid var(--odin-borda); background: var(--odin-cartao); color: var(--odin-texto); border-radius: 6px; padding: 4px 8px; }
+.es-grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 26px 22px; }
+.es-grade.es-lista { grid-template-columns: 1fr; gap: 0; }
+.es-cartao { display: flex; flex-direction: column; gap: 8px; position: relative; }
+.es-lista .es-cartao { flex-direction: row; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--odin-borda); gap: 16px; }
+.es-capa { aspect-ratio: 16 / 9; border-radius: 8px; overflow: hidden; background: linear-gradient(135deg, color-mix(in srgb, var(--es-teal) 35%, #fff), color-mix(in srgb, var(--es-acento) 30%, #fff)); display: grid; place-items: center; color: #fff; font: 700 2.2em Georgia, serif; }
+.es-lista .es-capa { width: 132px; flex: none; }
+.es-capa img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.es-cartao h3 { font: 700 1.08em/1.3 Georgia, "Times New Roman", serif; margin: 0; cursor: pointer; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.es-cartao h3:hover { color: var(--es-acento); }
+.es-meta { font: .78em Arial, sans-serif; color: var(--odin-suave); }
+.es-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.es-tags span { font: .72em Arial; background: color-mix(in srgb, var(--es-teal) 15%, transparent); color: var(--odin-texto); border-radius: 10px; padding: 1px 8px; }
+.es-acoes { display: flex; gap: 2px; margin-top: auto; }
+.es-acoes button { border: 0; background: transparent; cursor: pointer; font-size: 1.05em; padding: 4px 6px; border-radius: 6px; color: var(--odin-suave); }
+.es-acoes button:hover { background: color-mix(in srgb, var(--odin-texto) 8%, transparent); color: var(--odin-texto); }
+.es-acoes button[aria-pressed="true"] { color: var(--es-acento); }
+.es-vazio { text-align: center; padding: 60px 10px; color: var(--odin-suave); }
+.es-vazio b { display: block; font: 700 1.4em Georgia, serif; color: var(--odin-texto); margin-bottom: 6px; }
+
+/* modo leitura */
+.es-leitor { max-width: 720px; margin: 0 auto; padding: 10px 6px 60px; }
+.es-leitor .es-barra { display: flex; gap: 8px; align-items: center; position: sticky; top: 52px; background: var(--odin-cartao); padding: 8px 0; z-index: 3; border-bottom: 1px solid var(--odin-borda); flex-wrap: wrap; }
+.es-leitor h1 { font: 700 2.1em/1.18 Georgia, serif; margin: 22px 0 8px; }
+.es-leitor .es-texto { font: calc(20px * var(--odin-escala))/1.65 Georgia, "Times New Roman", serif; }
+.es-leitor .es-texto mark { background: #fff3a3; color: #111; border-radius: 2px; }
+.es-leitor img.es-hero { width: 100%; border-radius: 10px; margin: 12px 0; }
+.es-destaques li { margin: 10px 0; padding-left: 10px; border-left: 3px solid #f5c518; font-family: Georgia, serif; }
+.es-destaques small { display: block; color: var(--odin-suave); font-family: Arial; }
+.es-pop { position: absolute; z-index: 30; background: #111; color: #fff; border-radius: 6px; padding: 4px; display: flex; gap: 4px; }
+.es-pop button { border: 0; background: transparent; color: #fff; cursor: pointer; font: 600 .8em Arial; padding: 4px 8px; }
+.es-revisao { max-width: 640px; margin: 10px auto; text-align: center; }
+.es-revisao blockquote { font: italic 1.35em/1.5 Georgia, serif; margin: 20px 0; padding: 18px 22px; border-radius: 12px; background: color-mix(in srgb, #f5c518 14%, var(--odin-cartao)); }
+
+@media (max-width: 760px) {
+  .es-corpo { grid-template-columns: 1fr; }
+  .es-lateral { display: flex; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--odin-borda); padding: 6px; gap: 4px; }
+  .es-lateral button { width: auto; white-space: nowrap; }
+  .es-lateral h5, .es-lateral .es-tagsl { display: none; }
+  .es-main { padding: 12px; }
+  .es-leitor h1 { font-size: 1.6em; }
+}

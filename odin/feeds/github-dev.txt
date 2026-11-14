@@ -1,0 +1,6 @@
+# ODIN · Projetos GitHub Dev — índice gerado em 2026-11-14 a partir de config/feeds/github-dev.txt
+# nome | arquivo local espelhado | URL original
+GitHub Daily Trending Repositories | /odin/feeds/github-dev/af5c26b29a.xml | https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml
+The GitHub Blog | /odin/feeds/github-dev/d070c82cd8.xml | https://github.blog/feed/
+Hacker News: Show HN | /odin/feeds/github-dev/0ca7286148.xml | https://hnrss.org/show?points=50
+DEV Community | /odin/feeds/github-dev/f5e7bb0256.xml | https://dev.to/feed

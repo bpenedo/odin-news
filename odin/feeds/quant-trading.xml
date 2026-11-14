@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:odin="https://odin.local/ns">
+<channel>
+<title>📊 Quantitative Trading — ODIN</title>
+<link>/portal#quant-trading</link>
+<description>Coluna Quantitative Trading do Jornal Diário ODIN, atualizada diariamente</description>
+<language>pt-BR</language>
+<odin:coluna>quant-trading</odin:coluna>
+</channel>
+</rss>

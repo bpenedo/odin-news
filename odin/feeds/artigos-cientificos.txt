@@ -1,0 +1,6 @@
+# ODIN · Artigos Científicos — índice gerado em 2026-11-14 a partir de config/feeds/artigos-cientificos.txt
+# nome | arquivo local espelhado | URL original
+www.nature.com | /odin/feeds/artigos-cientificos/2457669deb.xml | https://www.nature.com/nature.rss
+www.science.org | /odin/feeds/artigos-cientificos/c2e927046f.xml | https://www.science.org/rss/news_current.xml
+PLOS One | /odin/feeds/artigos-cientificos/4fe87fbade.xml | https://journals.plos.org/plosone/feed/atom
+All Top News -- ScienceDaily | /odin/feeds/artigos-cientificos/97cab778e3.xml | https://www.sciencedaily.com/rss/top/science.xml

@@ -1,0 +1,6 @@
+# ODIN · Informações Anti-Aging — índice gerado em 2026-11-14 a partir de config/feeds/anti-aging.txt
+# nome | arquivo local espelhado | URL original
+Healthy Aging News -- ScienceDaily | /odin/feeds/anti-aging/dc5a19a5a8.xml | https://www.sciencedaily.com/rss/health_medicine/healthy_aging.xml
+Fight Aging! | /odin/feeds/anti-aging/885a937ffc.xml | https://www.fightaging.org/feed/
+Lifespan Research Institute | /odin/feeds/anti-aging/881eb8160f.xml | https://www.lifespan.io/feed/
+"longevidade OR antienvelhecimento" - Google Notícias | /odin/feeds/anti-aging/3d3ed6f02d.xml | https://news.google.com/rss/search?q=longevidade+OR+antienvelhecimento&hl=pt-BR&gl=BR&ceid=BR:pt-419

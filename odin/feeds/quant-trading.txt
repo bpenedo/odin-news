@@ -1,0 +1,5 @@
+# ODIN · Quantitative Trading — índice gerado em 2026-11-14 a partir de config/feeds/quant-trading.txt
+# nome | arquivo local espelhado | URL original
+q-fin.TR updates on arXiv.org | /odin/feeds/quant-trading/9d9fef484c.xml | https://rss.arxiv.org/rss/q-fin.TR
+Algorithmic Trading | /odin/feeds/quant-trading/e3c956558d.xml | https://www.reddit.com/r/algotrading/.rss
+https://www.reddit.com/r/quant/.rss | /odin/feeds/quant-trading/2a03e9a99e.xml | https://www.reddit.com/r/quant/.rss

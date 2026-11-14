@@ -1,0 +1,6 @@
+# ODIN · Inteligência Artificial — índice gerado em 2026-11-14 a partir de config/feeds/inteligencia-artificial.txt
+# nome | arquivo local espelhado | URL original
+Artificial intelligence – MIT Technology Review | /odin/feeds/inteligencia-artificial/e7313ed178.xml | https://www.technologyreview.com/topic/artificial-intelligence/feed
+AI / The Verge | /odin/feeds/inteligencia-artificial/f98a834a72.xml | https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+cs.AI updates on arXiv.org | /odin/feeds/inteligencia-artificial/b49eec5cb2.xml | https://rss.arxiv.org/rss/cs.AI
+""inteligência artificial"" - Google Notícias | /odin/feeds/inteligencia-artificial/bf8998c05c.xml | https://news.google.com/rss/search?q=%22intelig%C3%AAncia+artificial%22&hl=pt-BR&gl=BR&ceid=BR:pt-419
