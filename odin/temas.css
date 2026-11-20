@@ -1,0 +1,71 @@
+/* ODIN — On Demand Information and News · Autor: ProfBru - Bruno Penedo © 2026 - TODOS OS DIREITOS RESERVADOS · profbruanbima@gmail.com
+   Tema compartilhado por todos os aplicativos do painel: modos claro/cinza/escuro, fundo pastel,
+   imagem de fundo (página inteira e por categoria) com véu ajustável 50–90 %, escala de fonte. */
+
+.odin-app {
+  --odin-escala: 1;
+  --odin-fundo: #ffffff;
+  --odin-pastel: transparent;
+  --odin-texto: #111111;
+  --odin-suave: #4f6b72;
+  --odin-borda: #c1dad7;
+  --odin-cartao: #ffffff;
+  --odin-destaque: #49a5d3;
+  --odin-link: #004080;
+  --odin-veu: 0.7;                       /* opacidade do véu sobre a imagem: 0,5–0,9 */
+  --odin-imagem: none;
+  position: relative;
+  isolation: isolate;
+  color: var(--odin-texto);
+  font-size: calc(13px * var(--odin-escala));
+  background: var(--odin-pastel);
+  min-height: 70vh;
+  border-radius: 6px;
+}
+.odin-app::before {                       /* imagem de fundo de página inteira */
+  content: ""; position: absolute; inset: 0; z-index: -2;
+  background: var(--odin-imagem) center / cover no-repeat;
+  border-radius: inherit;
+}
+.odin-app::after {                        /* véu: garante leitura sobre qualquer imagem */
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: var(--odin-fundo); opacity: var(--odin-veu);
+  border-radius: inherit;
+}
+.odin-app[data-modo="cinza"]  { --odin-fundo:#e6e6e6; --odin-texto:#1d1d1d; --odin-cartao:#f2f2f2; --odin-borda:#b9b9b9; --odin-suave:#4a4a4a; --odin-link:#1f3f66; }
+.odin-app[data-modo="escuro"] { --odin-fundo:#15171a; --odin-texto:#e7e9ec; --odin-cartao:#1f2226; --odin-borda:#3a4046; --odin-suave:#a7b3bb; --odin-link:#8cc4ff; --odin-destaque:#7cc4e8; }
+.odin-app[data-modo="escuro"] img { filter: brightness(.9); }
+
+/* barra de conforto visual (canto superior direito) */
+.odin-conforto { display:flex; flex-wrap:wrap; gap:6px; align-items:center; justify-content:flex-end; font: 12px Arial, Helvetica, sans-serif; }
+.odin-conforto button, .odin-conforto select, .odin-conforto label.odin-btn {
+  font: inherit; border:1px solid var(--odin-borda); background: var(--odin-cartao); color: var(--odin-texto);
+  padding: 3px 7px; border-radius: 4px; cursor: pointer; line-height: 1.2;
+}
+.odin-conforto button[aria-pressed="true"] { background: var(--odin-destaque); color: #fff; border-color: var(--odin-destaque); }
+.odin-conforto .odin-fontes button { padding: 2px 6px; min-width: 2.2em; }
+.odin-conforto .odin-pastel { width: 18px; height: 18px; border-radius: 50%; padding: 0; border: 1px solid #0002; }
+.odin-conforto input[type=range] { width: 90px; accent-color: var(--odin-destaque); }
+.odin-conforto input[type=file] { display: none; }
+.odin-sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+
+.odin-toast { position: fixed; right: 16px; bottom: 16px; background: #111; color: #fff; padding: 8px 14px;
+  border-radius: 6px; font: 13px Arial, sans-serif; z-index: 9999; opacity: 0; transition: opacity .25s; pointer-events:none; }
+.odin-toast.vis { opacity: .92; }
+
+@media (max-width: 640px) {
+  .odin-conforto { justify-content: flex-start; }
+  .odin-conforto input[type=range] { width: 70px; }
+}
+@media print {
+  .odin-conforto, .odin-nao-imprimir { display: none !important; }
+  .odin-app::before, .odin-app::after { display: none; }
+}
+
+/* dica do logo: mouse em cima (computador) ou toque (celular: o span recebe foco) */
+.odin-dica { position: relative; display: inline-block; outline: none; -webkit-tap-highlight-color: transparent; }
+.odin-dica::after { content: attr(data-dica); position: absolute; left: 50%; top: 100%; transform: translate(-50%, 4px); z-index: 60;
+  white-space: nowrap; font: 600 12px/1.2 Arial, sans-serif; letter-spacing: .02em; color: #fff; background: #0b2a6b;
+  padding: 6px 10px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,60,160,.35); opacity: 0; pointer-events: none; transition: opacity .15s, transform .15s; }
+.odin-dica:hover::after, .odin-dica:focus::after, .odin-dica:focus-within::after { opacity: 1; transform: translate(-50%, 8px); }
+@media print { .odin-dica::after { display: none; } }

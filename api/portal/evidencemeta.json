@@ -1,0 +1,1 @@
+{"queries":[{"id":"cats","compiledQueryString":"select id, emoji, nome, total_itens from odin.colunas order by ordem","inputQueryString":"select id, emoji, nome, total_itens from odin.colunas order by ordem","compiled":false,"inline":true}]}
